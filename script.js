@@ -40,16 +40,5 @@ window.addEventListener('load', checkSectionVisibility);
 checkSectionVisibility();
 
 
-// Get the profile image element by id
-const profileImage = document.getElementById('profileImage');
-
-// Add click event listener to rotate the image
-profileImage.addEventListener('click', function () {
-  profileImage.style.transform = 'rotate(360deg)'; // Rotate the image by 360 degrees
-  // Optionally, you can reset it after a short time for repeated clicks
-  setTimeout(() => {
-    profileImage.style.transform = 'rotate(0deg)';
-  }, 600); // Reset after 600ms (duration of the rotation)
-});
 
 
