@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      transition: background-color 0.3s, color 0.3s;
+      overflow: hidden; /* To prevent scrolling while animation is active */
     }
 
     .container {
@@ -22,118 +22,11 @@
       border-radius: 50%;
       display: block;
       margin: 0 auto 20px;
-    }
-
-    h1, h2 {
-      text-align: center;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #007BFF;
-    }
-
-    /* Dark Mode Styles */
-    .dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-
-    /* Scroll to top button */
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      padding: 10px 15px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      font-size: 20px;
       cursor: pointer;
-      display: none;
-      z-index: 1000;
+      position: relative;
     }
 
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <img src="personal-icon-free-vector.jpg" alt="Your Photo" class="profile-img">
-      <h1>Ahmed A. Al-Akkad</h1>
-      <p>Technical Support – Al Saqer Insurance</p>
-      <button id="mode-toggle" class="btn">Toggle Dark Mode</button>
-    </div>
-  </header>
-
-  <section class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m a dedicated and detail-oriented professional with a strong passion for helping others through technology...</p>
-    </div>
-  </section>
-
-  <section class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="#">Shadded</a></li>
-        <li><a href="#">Alsaqer</a></li>
-        <li><a href="#">Altawounia</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:you@example.com">Shawi@gmail.com</a></p>
-      <p>LinkedIn: <a href="#">linkedin.com/in/shawi</a></p>
-      <p>GitHub: <a href="#">github.com/shawi</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Ahmed A. Al-Akkad. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <button class="back-to-top" onclick="scrollToTop()">↑</button>
-
-  <script>
-    // Dark mode toggle
-    const modeToggleButton = document.getElementById('mode-toggle');
-    modeToggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDarkMode = document.body.classList.contains('dark-mode');
-      modeToggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    });
-
-    // Scroll to top button visibility
-    const topBtn = document.querySelector(".back-to-top");
-    window.onscroll = () => {
-      if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
-      }
-    };
-
-    // Scroll to top function
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
-</body>
-</html>
+    .shape {
+      position: absolute;
+      width: 50px;
+      height: 50px
