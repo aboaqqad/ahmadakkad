@@ -1,55 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AL-Akkad - Personal Website</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <img src="personal-icon-free-vector.jpg" alt="Your Photo" class="profile-img">
-      <h1>Ahmed A. Al-Akkad</h1>
-      <p>Technical Support – Al Saqer Insurance</p>
-    </div>
-  </header>
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <section class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m a dedicated and detail-oriented professional with a strong passion for helping others through technology. With a calm and patient approach, I work as a Technical Support Specialist at an insurance company, where I assist clients and team members in solving technical issues and navigating complex systems.
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f0f4f8;  /* Light blue-gray background */
+  color: #333;
+}
 
-My role combines communication, problem-solving, and technical expertise to ensure smooth operations and customer satisfaction. Whether it's troubleshooting software problems or guiding users through our digital platforms, I take pride in delivering clear, reliable support with a human touch.
+/* Header Styling */
+header {
+  background-color: #007BFF;  /* Blue background for header */
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
 
-I’m always eager to learn, grow, and adapt — especially when it comes to improving user experience and keeping up with the latest in tech and customer service.</p>
-    </div>
-  </section>
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
-  <section class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="#">Shadded</a></li>
-        <li><a href="#">Alsaqer</a></li>
-        <li><a href="#">Altawounia</a></li>
-      </ul>
-    </div>
-  </section>
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
 
-  <section class="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:you@example.com">Shawi@gmail.com</a></p>
-      <p>LinkedIn: <a href="#">linkedin.com/in/shawi</a></p>
-      <p>GitHub: <a href="#">github.com/shawi</a></p>
-    </div>
-  </section>
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Ahmed AL-Akkad. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+p {
+  font-size: 1.2em;
+}
+
+/* Section Styling */
+section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #fff;  /* White background for sections */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007BFF;  /* Blue bottom border to separate sections */
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #007BFF;  /* Blue color for section headings */
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #555;
+}
+
+.projects ul {
+  list-style-type: none;
+}
+
+.projects li {
+  margin: 10px 0;
+}
+
+.projects a {
+  color: #007BFF;  /* Blue links */
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.projects a:hover {
+  text-decoration: underline;  /* Underline effect on hover */
+}
+
+/* Contact Section Styling */
+.contact p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.contact a {
+  color: #007BFF;  /* Blue contact links */
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;  /* Underline effect on hover */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;  /* Dark background for footer */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .about p {
+    font-size: 1em;
+  }
+}
