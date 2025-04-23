@@ -167,3 +167,17 @@ footer p {
     font-size: 1.6rem;
   }
 }
+
+/* Image keeko */
+
+.profile-img {
+  width: 160px;       /* or whatever size you need */
+  height: 160px;      /* fixed box, but image won’t be cropped */
+  object-fit: contain;/* show the full image, letter-boxed if needed */
+  object-position: center; /* center it in the frame */
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
