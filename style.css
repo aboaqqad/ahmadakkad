@@ -8,245 +8,162 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #f0f4f8;  /* Light blue-gray background */
+  background: #f5f5f5;
   color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Header Styling */
 header {
-  background-color: #007BFF;  /* Blue background for header */
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: #fff;
   text-align: center;
-  padding: 50px 0;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 1200px;
+  padding: 4rem 0;
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  border: 4px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
-p {
-  font-size: 1.2em;
+header h1 {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
 }
 
-/* Section Styling */
-section {
-  padding: 50px 0;
+header p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 2rem;
+  color: #2a5298;
   text-align: center;
-  background-color: #fff;  /* White background for sections */
-  margin-bottom: 20px;
-  border-bottom: 2px solid #007BFF;  /* Blue bottom border to separate sections */
+  margin-bottom: 1rem;
+  position: relative;
 }
 
-h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #007BFF;  /* Blue color for section headings */
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff6f61;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* About Section */
+.about {
+  background: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .about p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1em;
-  line-height: 1.7;
-  color: #555;
+  font-size: 1rem;
+  color: #444;
+  text-align: justify;
 }
 
-.projects ul {
-  list-style-type: none;
+/* Programs Section */
+.programs {
+  margin: 2rem auto;
 }
 
-.projects li {
-  margin: 10px 0;
+.programs ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
-.projects a {
-  color: #007BFF;  /* Blue links */
+.programs li {
+  background: #fff;
+  padding: 1.2rem;
+  border-left: 4px solid #ff6f61;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.programs li:hover {
+  transform: translateY(-4px);
+}
+
+.programs a {
   text-decoration: none;
-  font-size: 1.1em;
+  color: #1e3c72;
+  font-weight: bold;
 }
 
-.projects a:hover {
-  text-decoration: underline;  /* Underline effect on hover */
+/* Contact Section */
+.contact {
+  background: #fff;
+  margin: 2rem auto 4rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Contact Section Styling */
 .contact p {
-  font-size: 1.1em;
-  color: #555;
+  margin: 0.5rem 0;
+  font-size: 1rem;
 }
 
 .contact a {
-  color: #007BFF;  /* Blue contact links */
+  color: #2a5298;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .contact a:hover {
-  text-decoration: underline;  /* Underline effect on hover */
+  text-decoration: underline;
 }
 
 /* Footer Styling */
 footer {
-  background-color: #333;  /* Dark background for footer */
-  color: #fff;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 20px;
+  padding: 1.5rem 0;
+  background: #2a5298;
+  color: #fff;
 }
 
 footer p {
-  font-size: 1em;
+  font-size: 0.9rem;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  .container {
-    width: 90%;
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
   }
-
-  h1 {
-    font-size: 2em;
+  header p {
+    font-size: 1rem;
   }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
-
-  .about p {
-    font-size: 1em;
+  section h2 {
+    font-size: 1.6rem;
   }
 }
-
-/* About Me Section Styling */
-.about {
-  background-color: #E3F2FD;  /* Light blue background for the About Me section */
-  padding: 40px;
-  margin: 30px auto;
-  max-width: 800px;
-  border-radius: 10px;  /* Rounded corners for the section */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
-}
-
-.about h2 {
-  font-size: 2.5em;
-  color: #007BFF;  /* Blue color for heading */
-  text-transform: uppercase;  /* Makes the heading stand out */
-  letter-spacing: 2px;  /* Adds space between letters */
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.about p {
-  font-size: 1.2em;
-  line-height: 1.7;
-  color: #333;
-  font-weight: 300;  /* Lighter font weight for easy reading */
-  text-align: justify;  /* Makes the text aligned for better readability */
-  margin-top: 10px;
-}
-
-.about p span {
-  font-weight: bold;  /* Makes some words bold to highlight */
-  color: #007BFF;  /* Blue color for emphasized words */
-}
-
-/* Add a subtle hover effect for the "About Me" section */
-.about:hover {
-  background-color: #BBDEFB;  /* Slightly darker blue on hover */
-  transition: background-color 0.3s ease-in-out;
-}
-
-/* Header Styling */
-header {
-  background-color: #007BFF;  /* Blue background for header */
-  color: #fff;
-  text-align: center;
-  padding: 50px 0;
-}
-
-h1 {
-  font-size: 3.5em;  /* Larger font size for the name */
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;  /* Makes the name all caps for impact */
-  color: #fff;
-  letter-spacing: 2px;  /* Adds spacing between letters for a modern look */
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow to make the text pop */
-  margin-bottom: 15px;
-}
-
-/* Make sure the profile image and text are aligned well */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-/* Add a subtle hover effect to the name */
-h1:hover {
-  color: #FFD700;  /* Gold color on hover for a subtle effect */
-  cursor: pointer;  /* Changes cursor to pointer when hovered */
-  transition: color 0.3s ease;
-}
-
-/* ABOUT ME “CARD” */
-.about {
-  background: #ffffff;
-  border-left: 5px solid #007BFF;
-  margin: 2rem auto;
-  padding: 2rem;
-  max-width: 700px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.about h2 {
-  color: #007BFF;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #E3F2FD;
-  padding-bottom: 0.5rem;
-}
-
-.about p {
-  color: #444;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-.about p span {
-  color: #007BFF;
-  font-weight: 600;
-}
-
-
