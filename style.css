@@ -80,3 +80,41 @@ section {
 section.visible {
   opacity: 1;
 }
+
+/* Container to manage the layout */
+.container {
+  text-align: center;  /* Center everything */
+  position: relative;  /* Makes sure that child elements can be placed relative to the container */
+}
+
+/* Profile Image Styling */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  z-index: 1;  /* Ensure the image stays on top of any background, but not above text */
+}
+
+/* Hover effect on image - Zoom in */
+.profile-img:hover {
+  transform: scale(1.2); /* Zoom effect */
+}
+
+/* Rotate effect on click */
+.profile-img:active {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Ensure text remains visible */
+h1, p {
+  position: relative;
+  z-index: 2;  /* Ensure text is above any other potential layers */
+  margin-top: 20px;
+  color: #333;  /* Default color for text */
+}
+
