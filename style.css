@@ -176,4 +176,46 @@ footer p {
   transition: background-color 0.3s ease-in-out;
 }
 
+/* Header Styling */
+header {
+  background-color: #007BFF;  /* Blue background for header */
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+
+h1 {
+  font-size: 3.5em;  /* Larger font size for the name */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;  /* Makes the name all caps for impact */
+  color: #fff;
+  letter-spacing: 2px;  /* Adds spacing between letters for a modern look */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow to make the text pop */
+  margin-bottom: 15px;
+}
+
+/* Make sure the profile image and text are aligned well */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Add a subtle hover effect to the name */
+h1:hover {
+  color: #FFD700;  /* Gold color on hover for a subtle effect */
+  cursor: pointer;  /* Changes cursor to pointer when hovered */
+  transition: color 0.3s ease;
+}
 
