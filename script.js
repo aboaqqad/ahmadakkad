@@ -52,3 +52,4 @@ profileImage.addEventListener('click', function () {
   }, 600); // Reset after 600ms (duration of the rotation)
 });
 
+
