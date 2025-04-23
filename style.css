@@ -65,3 +65,19 @@ footer {
   color: #fff;
   font-size: 0.9rem;
 }
+
+/* Add smooth transition to profile image */
+.profile-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Fade-in effect when section is in view */
+section {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+}
+
